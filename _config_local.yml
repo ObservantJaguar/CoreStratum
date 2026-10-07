@@ -1,0 +1,14 @@
+# Local overrides for building/serving without the remote-theme plugin.
+# Usage: bundle exec jekyll serve --config _config.yml,_config_local.yml
+theme: just-the-docs
+
+defaults:
+  - scope:
+      path: "docs"
+    values:
+      layout: "default"
+
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
+  - jekyll-relative-links

@@ -1,4 +1,4 @@
-theme: just-the-docs
+remote_theme: just-the-docs/just-the-docs@v0.8.2
 
 title: CoreStratum
 description: An open-source encyclopedia of open technologies for systems administrators and DevOps engineers.
@@ -20,12 +20,6 @@ last_edit_timestamp: true
 collections:
   docs:
     output: true
-
-defaults:
-  - scope:
-      path: "docs"
-    values:
-      layout: "default"
 
 just_the_docs:
   navigation_depth: 4

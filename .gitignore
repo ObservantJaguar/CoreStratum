@@ -1,0 +1,20 @@
+# Dependencies
+vendor/
+.bundle/
+
+# Node / tooling
+node_modules/
+.gigatool/
+
+# Jekyll output
+_site/
+.sass-cache/
+.jekyll-cache/
+
+# OS / editor
+.DS_Store
+Thumbs.db
+*.swp
+
+# Logs / temp
+*.log

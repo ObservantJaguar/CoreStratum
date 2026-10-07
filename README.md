@@ -53,11 +53,11 @@ Browse the sidebar or start at the [table of contents](docs/index.md). Pick a do
 
 The wiki is built with [Jekyll](https://jekyllrb.com) and the [Just the Docs](https://just-the-docs.com) theme, and is designed to be published on [GitHub Pages](https://pages.github.com).
 
-To build locally:
+To build locally (the site sources live in `docs/`):
 
 ```bash
 bundle install
-bundle exec jekyll serve
+bundle exec jekyll serve --source docs --destination docs/_site --config docs/_config.yml,docs/_config_local.yml
 ```
 
 Then open `http://localhost:4000/CoreStratum/` (or the address shown in the terminal).

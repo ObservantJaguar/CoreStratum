@@ -17,9 +17,11 @@ nav_sort: case_insensitive
 back_to_top: true
 last_edit_timestamp: true
 
-collections:
-  docs:
-    output: true
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: "default"
 
 just_the_docs:
   navigation_depth: 4

@@ -22,6 +22,7 @@ Browse the sidebar or the table of contents below. Pick the domain that matches 
 - [History](foundations/history/index.md)
 - [Learning](foundations/learning/index.md)
 - [People](foundations/people/index.md)
+- [IT Roles](roles/index.md)
 
 ## 2. Operating Systems
 - [Linux](operating-systems/linux/index.md)

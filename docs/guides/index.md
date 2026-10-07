@@ -31,6 +31,10 @@ A guide is not a copy-paste manual for one tool. It is a **route map**: the goal
 - [Monitoring and Logging](monitoring-logging.md) — Zabbix and Grafana for metrics, Loki for centralized logs.
 - [Git Server with Gitea](git-server-gitea.md) — self-hosted Git hosting with CI basics.
 
+### Short recipes
+
+- [Recipes](recipes/index.md) — quick single-purpose tasks: SSH keys, firewall rules, LVM, cron/systemd timers, DNS diagnostics, snapshots and more.
+
 ## Guide template
 
 Every guide follows the same structure so an administrator can quickly find the phases and decision points:

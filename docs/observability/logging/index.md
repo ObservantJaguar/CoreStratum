@@ -28,3 +28,7 @@ Centralized logging covers the collection, aggregation, and storage of textual e
 ## Pipelines
 
 - [Vector](vector.md) — high-performance Rust-based tool for building data pipelines.
+
+## All-in-one platforms
+
+- [Graylog](graylog.md) — centralized log management with search, alerting and dashboards.

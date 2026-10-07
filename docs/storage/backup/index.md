@@ -27,6 +27,8 @@ Backup and disaster recovery covers tools for ensuring data resilience and creat
 - [Velero](velero.md) — backup and migration tool for Kubernetes resources.
 - [Bacula](bacula.md) — scalable enterprise-level network backup system.
 - [Proxmox Backup Server](proxmox-backup-server.md) — backup of Proxmox VMs and containers.
+- [UrBackup](urbackup.md) — client/server backup with an easy web interface.
+- [Duplicati](duplicati.md) — encrypted backup to cloud, FTP and NAS destinations.
 
 ## Transport
 

@@ -1,6 +1,6 @@
 ---
 title: BeeGFS
-parent: Distributed Filesystems
+parent: Distributed Storage
 ---
 
 # BeeGFS
@@ -9,4 +9,4 @@ BeeGFS is a parallel, cluster filesystem designed for high-performance computing
 
 ## Resources
 
-- [BeeGFS — beegfs.io](https://www.beegfs.io)
+- [BeeGFS вЂ” beegfs.io](https://www.beegfs.io)

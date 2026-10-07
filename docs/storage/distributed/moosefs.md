@@ -1,6 +1,6 @@
 ---
 title: MooseFS
-parent: Distributed Filesystems
+parent: Distributed Storage
 ---
 
 # MooseFS
@@ -9,4 +9,4 @@ MooseFS is a fault-tolerant, distributed network filesystem that presents multip
 
 ## Resources
 
-- [MooseFS — moosefs.com](https://moosefs.com)
+- [MooseFS вЂ” moosefs.com](https://moosefs.com)

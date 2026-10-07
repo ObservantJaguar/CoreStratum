@@ -22,14 +22,13 @@ The wiki is organized into three sections: **Theory** (foundations and knowledge
 | 4 | [Cluster Orchestration](docs/orchestration/index.md) | Kubernetes, schedulers, GitOps |
 | 5 | [Networking](docs/networking/index.md) | Diagnostics, firewalls, VPN |
 | 6 | [Security](docs/security/index.md) | WAF, identity, cryptography, hardening |
-| 7 | [Storage](docs/storage/index.md) | Block, object, distributed, backup |
-| 8 | [Filesystems](docs/filesystems/index.md) | Linux, Windows, network, distributed |
-| 9 | [Databases](docs/databases/index.md) | Relational, NoSQL, time-series |
-| 10 | [Development](docs/development/index.md) | Build systems, debugging, version control |
-| 11 | [Communications](docs/communications/index.md) | Web, email, VoIP, messaging |
-| 12 | [Observability](docs/observability/index.md) | Monitoring, logging, alerting |
-| 13 | [Infrastructure Automation](docs/automation/index.md) | IaC, configuration management |
-| 14 | [Engineering Systems](docs/engineering/index.md) | CAD, ERP, CRM, BI/GIS |
+| 7 | [Storage](docs/storage/index.md) | Block, object, distributed, network filesystems, backup |
+| 8 | [Databases](docs/databases/index.md) | Relational, NoSQL, time-series |
+| 9 | [Development](docs/development/index.md) | Build systems, debugging, version control |
+| 10 | [Communications](docs/communications/index.md) | Web, email, VoIP, messaging |
+| 11 | [Observability](docs/observability/index.md) | Monitoring, logging, alerting |
+| 12 | [Infrastructure Automation](docs/automation/index.md) | IaC, configuration management |
+| 13 | [Engineering Systems](docs/engineering/index.md) | CAD, ERP, CRM, BI/GIS |
 
 ### Practice — guides
 

@@ -75,24 +75,18 @@ Browse the sidebar or the table of contents below. Pick the domain that matches 
 - [Block Storage](storage/block/index.md)
 - [Object Storage](storage/object/index.md)
 - [Distributed Storage](storage/distributed/index.md)
+- [Network Filesystems](storage/network-filesystems/index.md)
 - [Backup and Disaster Recovery](storage/backup/index.md)
 - [RAID](storage/raid/index.md)
 
-## 9. Filesystems
-- [Linux Filesystems](filesystems/linux/index.md)
-- [Windows Filesystems](filesystems/windows/index.md)
-- [macOS Filesystems](filesystems/macos/index.md)
-- [Network Filesystems](filesystems/network/index.md)
-- [Distributed Filesystems](filesystems/distributed/index.md)
-
-## 10. Databases
+## 9. Databases
 - [Relational](databases/relational/index.md)
 - [NoSQL](databases/nosql/index.md)
 - [Time-Series](databases/time-series/index.md)
 - [Graph](databases/graph/index.md)
 - [Embedded](databases/embedded/index.md)
 
-## 11. Development
+## 10. Development
 - [Build Systems and Compilers](development/build-systems/index.md)
 - [Debugging and Profiling](development/debugging/index.md)
 - [Reverse Engineering](development/reverse-engineering/index.md)
@@ -103,7 +97,7 @@ Browse the sidebar or the table of contents below. Pick the domain that matches 
 - [Version Control](development/version-control/index.md)
 - [Programming Languages](development/programming-languages/index.md)
 
-## 12. Communications
+## 11. Communications
 - [Web Servers and Proxies](communications/web/index.md)
 - [Email Infrastructure](communications/email/index.md)
 - [IP Telephony](communications/voip/index.md)
@@ -111,19 +105,19 @@ Browse the sidebar or the table of contents below. Pick the domain that matches 
 - [Federated Social Networks](communications/fediverse/index.md)
 - [Self-Hosted Hubs](communications/hubs/index.md)
 
-## 13. Observability and Monitoring
+## 12. Observability and Monitoring
 - [Monitoring and Metrics](observability/monitoring/index.md)
 - [Centralized Logging](observability/logging/index.md)
 - [Visualization and Alerting](observability/alerting/index.md)
 
-## 14. Infrastructure Automation
+## 13. Infrastructure Automation
 - [Infrastructure as Code](automation/iac/index.md)
 - [Configuration Management](automation/configuration-management/index.md)
 - [Provisioning](automation/provisioning/index.md)
 - [State Management](automation/state-management/index.md)
 - [Secrets Management](automation/secrets-management/index.md)
 
-## 15. Engineering and Business Systems
+## 14. Engineering and Business Systems
 - [CAD — Engineering Design](engineering/cad/index.md)
 - [EDA — Electronics Design](engineering/eda/index.md)
 - [ERP — Enterprise Resource Planning](engineering/erp/index.md)

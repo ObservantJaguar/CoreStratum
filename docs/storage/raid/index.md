@@ -10,4 +10,4 @@ RAID (Redundant Array of Independent Disks) combines multiple physical disks int
 
 - [mdadm](mdadm.md) — the standard Linux tool for managing software RAID arrays.
 - [OpenZFS](openzfs.md) — ZFS with RAID-Z parity redundancy, snapshots, and checksums.
-- [Btrfs (RAID)](../../filesystems/linux/btrfs.md) — Btrfs implements its own RAID levels for metadata and data.
+- **Btrfs RAID** — the Btrfs filesystem implements its own RAID levels for metadata and data (part of the Linux kernel, not a separate tool).

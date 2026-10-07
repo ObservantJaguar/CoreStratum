@@ -1,6 +1,6 @@
 ---
 title: Lustre
-parent: Distributed Filesystems
+parent: Distributed Storage
 ---
 
 # Lustre
@@ -9,4 +9,4 @@ Lustre is a high-performance, massively parallel distributed filesystem widely u
 
 ## Resources
 
-- [Lustre — lustre.org](https://www.lustre.org)
+- [Lustre вЂ” lustre.org](https://www.lustre.org)

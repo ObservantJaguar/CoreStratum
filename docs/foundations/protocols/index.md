@@ -41,6 +41,12 @@ Because the specification is public, open protocols encourage competing implemen
 - **Kerberos** — an authentication protocol based on symmetric key cryptography and a trusted third party (the KDC). It is central to Active Directory and FreeIPA.
 - **RADIUS** — AAA (Authentication, Authorization, Accounting) protocol used by network access servers, [FreeRADIUS](../../networking/intrusion-prevention/freeradius.md) being a prominent open implementation.
 
+## File access protocols
+
+- **NFS** — the Network File System protocol (RFC 1813 for NFSv3, RFC 3530 for NFSv4) allows hosts to mount and share filesystems over a network. Implementations include Linux's nfs-utils and [NFS server/client packages](../../storage/network-filesystems/nfs.md).
+- **SMB/CIFS** — the Server Message Block protocol, the dominant file-sharing protocol since the DOS era, standardized in the SMB2/SMB3 dialects. The main open implementation is [Samba](../../storage/network-filesystems/samba.md); it also provides a domain-controller role.
+- **SFTP** — the SSH File Transfer Protocol subsystem of SSH, used for secure file transfer and accessible as a filesystem via [SSHFS](../../storage/network-filesystems/sshfs.md).
+
 ## Related pages
 
 - [Open Standards](../standards/index.md) — the formal specifications built on open protocols.

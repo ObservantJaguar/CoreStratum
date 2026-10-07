@@ -12,3 +12,6 @@ Distributed storage aggregates resources from multiple nodes into fault-tolerant
 - [MinIO](minio.md) — high-performance object storage compatible with the Amazon S3 API.
 - [Longhorn](longhorn.md) — cloud-native block storage with high availability for Kubernetes.
 - [GlusterFS](glusterfs.md) — scalable network filesystem for aggregating disk resources.
+- [MooseFS](moosefs.md) — fault-tolerant distributed network filesystem.
+- [Lustre](lustre.md) — high-performance parallel filesystem for HPC.
+- [BeeGFS](beegfs.md) — parallel cluster filesystem for demanding storage workloads.

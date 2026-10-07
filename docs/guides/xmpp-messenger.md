@@ -44,18 +44,18 @@ This is why the architecture below looks a lot like the [Matrix Messenger](matri
 
 ```
   Conversations / Gajim / Dino / Monal
-        РІвЂќвЂљ   (XMPP text + presence over TLS 5222)
-        РІвЂќвЂљ
-        РІвЂќвЂљ   (Jingle media over RTP/UDP, outside the XMPP server)
-        РІвЂќСљРІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂ“С” coturn РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂ“С” other user (if behind NAT)
-        РІвЂќвЂљ
-  РІвЂќРЉРІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂ“СРІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќС’
-  РІвЂќвЂљ  ejabberd  (example.com)        РІвЂќвЂљ
-  РІвЂќвЂљ   РІвЂќСљРІвЂќР‚РІвЂќР‚ TLS 5222 (client)         РІвЂќвЂљ
-  РІвЂќвЂљ   РІвЂќСљРІвЂќР‚РІвЂќР‚ 5269 (s2s federation)     РІвЂќвЂљ
-  РІвЂќвЂљ   РІвЂќСљРІвЂќР‚РІвЂќР‚ MAM (archiving)           РІвЂќвЂљ
-  РІвЂќвЂљ   РІвЂќвЂќРІвЂќР‚РІвЂќР‚ SQLite/PostgreSQL store   РІвЂќвЂљ
-  РІвЂќвЂќРІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќВ
+        |   (XMPP text + presence over TLS 5222)
+        |
+        |   (Jingle media over RTP/UDP, outside the XMPP server)
+        +----------- coturn ------------ other user (if behind NAT)
+        |
+  +----------------------------------------------------+
+  |  ejabberd  (example.com)                           |
+  |   |--- TLS 5222 (client)                           |
+  |   |--- 5269 (s2s federation)                       |
+  |   |--- MAM (archiving)                             |
+  |   \--- SQLite/PostgreSQL store                     |
+  +----------------------------------------------------+
 ```
 
 ## Roadmap
@@ -174,7 +174,7 @@ services:
       - "49152-65535:49152-65535/udp"
 ```
 
-- [ ] Open UDP 3478 and 49152РІР‚вЂњ65535 on the firewall
+- [ ] Open UDP 3478 and 49152�“65535 on the firewall
 - [ ] In clients, configure the STUN/TURN server (`turn:turn.example.com:3478?transport=udp`) with the shared secret or long-term credentials
 - [ ] Test a call between two devices on different networks
 

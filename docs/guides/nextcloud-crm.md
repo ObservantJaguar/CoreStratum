@@ -33,7 +33,7 @@ By the end, employees have a Dropbox/Google Drive + SharePoint-grade experience 
 
 - The [Docker Host with Traefik](docker-host-traefik.md) foundation layer
 - Domain: `nextcloud.example.com`, `office.example.com` (document server), `crm.example.com`
-- RAM/CPU: Nextcloud alone is light; OnlyOffice/Collabora wants 2+ GB RAM; Odoo wants 2РІР‚вЂњ4 GB. Plan a server with 8 GB RAM if you run all three.
+- RAM/CPU: Nextcloud alone is light; OnlyOffice/Collabora wants 2+ GB RAM; Odoo wants 2�“4 GB. Plan a server with 8 GB RAM if you run all three.
 - Storage: SSDs preferred for the database and media.
 
 ## Choosing the CRM
@@ -50,15 +50,15 @@ Both are fine on one host. If in doubt, start with **EspoCRM** to keep the stack
 ## Architecture
 
 ```
-                       РІвЂќРЉРІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќС’
-  users РІвЂќР‚РІвЂќР‚РІвЂ“С” Traefik РІвЂќР‚РІвЂќР‚РІвЂ“С”РІвЂќвЂљ Nextcloud (files, calendar, talk)РІвЂќвЂљ
-                       РІвЂќвЂљ   РІвЂќвЂќРІвЂќР‚РІвЂќР‚РІвЂ“С” OnlyOffice/Collabora      РІвЂќвЂљ
-                       РІвЂќвЂќРІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќВ
-                       РІвЂќРЉРІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќС’
-  users РІвЂќР‚РІвЂќР‚РІвЂ“С” Traefik РІвЂќР‚РІвЂќР‚РІвЂ“С”РІвЂќвЂљ CRM: Odoo  OR  EspoCRM           РІвЂќвЂљ
-                       РІвЂќвЂќРІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќВ
-                 Both share: the proxy network, a database,
-                 and the restic/Borg backup pipeline.
+                       +------------------------------------------------+
+  users ---> Traefik -->| Nextcloud (files, calendar, talk)             |
+                       |    \-- OnlyOffice/Collabora                    |
+                       +------------------------------------------------+
+                       +------------------------------------------------+
+  users ---> Traefik -->| CRM: Odoo  OR  EspoCRM                        |
+                       +------------------------------------------------+
+                Both share: the proxy network, a database,
+                and the restic/Borg backup pipeline.
 ```
 
 ## Roadmap
@@ -140,7 +140,7 @@ networks:
       - "traefik.http.services.office.loadbalancer.server.port=80"
 ```
 
-- [ ] In Nextcloud Settings РІвЂ вЂ™ OnlyOffice, set the server URL and secret
+- [ ] In Nextcloud Settings �� ’ OnlyOffice, set the server URL and secret
 - [ ] Create a test .odt/.docx and open it in the browser; try simultaneous editing
 
 **Note:** Collabora (CODE) is a lighter alternative if memory is tight. The integration works the same way via its own app.

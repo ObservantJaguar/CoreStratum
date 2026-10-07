@@ -34,7 +34,7 @@ A leading thinker of the open-source movement and author of *The Cathedral and t
 
 ### Ken Thompson and Dennis Ritchie
 
-The creators of **Unix** at Bell Labs in 1969Р В Р вЂ Р В РІР‚С™Р Р†Р вЂљРЎС™1973. Thompson designed the operating system; Ritchie created the **C language** and co-authored the classic *The C Programming Language*. Together they laid the blueprint for virtually all modern operating systems and system programming.
+The creators of **Unix** at Bell Labs in 1969� � � � � � —� �†� �—1973. Thompson designed the operating system; Ritchie created the **C language** and co-authored the classic *The C Programming Language*. Together they laid the blueprint for virtually all modern operating systems and system programming.
 
 ### Brian Kernighan
 

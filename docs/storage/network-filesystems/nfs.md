@@ -9,4 +9,4 @@ NFS (Network File System) allows hosts to mount and share filesystems over a net
 
 ## Resources
 
-- [NFS вЂ” nfs.sourceforge.net](https://nfs.sourceforge.net)
+- [NFS — nfs.sourceforge.net](https://nfs.sourceforge.net)

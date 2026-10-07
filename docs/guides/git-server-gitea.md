@@ -35,12 +35,12 @@ By the end, developers use `git push` to a server under your control, review cha
 ## Architecture
 
 ```
-   developers РІвЂќР‚РІвЂќР‚(git over https)РІвЂќР‚РІвЂќР‚РІвЂ“С” Traefik РІвЂќР‚РІвЂќР‚РІвЂ“С” Gitea (container)
-   developers РІвЂќР‚РІвЂќР‚(web UI)РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂ“С” Traefik РІвЂќР‚РІвЂќР‚РІвЂ“С” Gitea
-        РІвЂќвЂљ
-        РІвЂќСљРІвЂќР‚РІвЂќР‚ SQLite (default) or PostgreSQL (many users)
-        РІвЂќСљРІвЂќР‚РІвЂќР‚ Actions runner (CI) — on the host, connected to Gitea
-        РІвЂќвЂќРІвЂќР‚РІвЂќР‚ restic/Borg backup of repos + DB
+   developers ----(git over https)----> Traefik ---> Gitea (container)
+   developers ----(web UI)-------------> Traefik ---> Gitea
+        |
+        +------ SQLite (default) or PostgreSQL (many users)
+        +------ Actions runner (CI) -- on the host, connected to Gitea
+        +------ restic/Borg backup of repos + DB
 ```
 
 ## Roadmap
@@ -101,7 +101,7 @@ networks:
 ### Stage 2 — SSH access
 
 - [ ] The host port 2222 forwards to Gitea's SSH (port 22 inside the container)
-- [ ] Users add their SSH key in the web UI at **Settings РІвЂ вЂ™ SSH Keys**
+- [ ] Users add their SSH key in the web UI at **Settings �� ’ SSH Keys**
 - [ ] Test `git clone ssh://git@git.example.com:2222/org/repo.git`
 
 ### Stage 3 — Access control
@@ -146,7 +146,7 @@ docker exec -u git gitea gitea dump -c /data/gitea/conf/app.ini
 
 ### Stage 6 — Optional: LDAP/OAuth login
 
-- [ ] In Admin РІвЂ вЂ™ Authentication sources, add LDAP (if you have FreeIPA/Samba) or OAuth (e.g. Keycloak)
+- [ ] In Admin �� ’ Authentication sources, add LDAP (if you have FreeIPA/Samba) or OAuth (e.g. Keycloak)
 - [ ] Test login with an LDAP account
 - [ ] If no directory server, skip — local accounts are fine for small teams
 
@@ -164,7 +164,7 @@ docker exec -u git gitea gitea dump -c /data/gitea/conf/app.ini
 |---|---|---|
 | Git over SSH fails | Host port 2222 not open or wrong key | Open 2222; check `GITEA__server__SSH_PORT` and firewall |
 | Web UI slow | SQLite vs Postgres choice | Switch to Postgres for more than a few users |
-| Actions runner offline | Runner not registered or token wrong | Re-register `act_runner` with current token from Settings РІвЂ вЂ™ Actions |
+| Actions runner offline | Runner not registered or token wrong | Re-register `act_runner` with current token from Settings �� ’ Actions |
 | Clone URL wrong | `ROOT_URL`/`DOMAIN` misconfigured | Set `GITEA__server__ROOT_URL=https://git.example.com/` |
 | Backup missing new repos | Backup not including `data/` | Back up full `data/` volume (repos live there) |
 

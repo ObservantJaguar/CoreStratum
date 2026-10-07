@@ -6,7 +6,7 @@ grand_parent: Tools
 
 # Load Balancing
 
-Load balancing distributes network traffic and application requests across multiple servers to improve availability and scalability. This category covers L4/L7 load balancers, reverse proxyР Р†Р вЂљРІР‚Сљbased balancing, health checks, and high-availability mechanisms.
+Load balancing distributes network traffic and application requests across multiple servers to improve availability and scalability. This category covers L4/L7 load balancers, reverse proxy� �†� �—based balancing, health checks, and high-availability mechanisms.
 
 - [Envoy](envoy.md) — high-performance L7 proxy and data plane for microservices.
 - [Varnish](varnish.md) — HTTP accelerator and caching reverse proxy.

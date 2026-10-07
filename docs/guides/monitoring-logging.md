@@ -44,7 +44,7 @@ For a mixed SMB fleet (Windows + Linux + network devices), **Zabbix** is the low
 
 ## Prerequisites
 
-- A monitoring server (small VM, 2РІР‚вЂњ4 GB RAM)
+- A monitoring server (small VM, 2�“4 GB RAM)
 - The [Docker Host with Traefik](docker-host-traefik.md) foundation layer (optional but recommended for Grafana/Loki)
 - Targets to monitor: Linux servers, Windows servers, network devices (SNMP)
 - Notification channels: SMTP (see [Mail Server](mail-server.md)) or a Telegram bot
@@ -52,16 +52,17 @@ For a mixed SMB fleet (Windows + Linux + network devices), **Zabbix** is the low
 ## Architecture
 
 ```
-   Targets (Linux/Windows Switches)
-      РІвЂќвЂљ  agents / SNMP
-      РІвЂ“С
-   Zabbix Server РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂ“С” Zabbix DB (PostgreSQL)
-      РІвЂќвЂљ  alerts
-      РІвЂ“С      РІвЂќРЉРІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќС’
-   Grafana РІвЂќР‚РІвЂќР‚РІвЂ“С”РІвЂќвЂљ Zabbix datasource РІвЂќвЂљ   РІвЂќвЂљ Loki РІвЂќР‚РІвЂќР‚ Promtail РІвЂќР‚РІвЂќР‚ logs from hosts
-              РІвЂќвЂќРІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќВ   РІвЂќвЂљ Prometheus (optional)
-              РІвЂќРЉРІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќС’   РІвЂќвЂљ Alertmanager (optional)
-              РІвЂќвЂќРІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќВ
+   Targets (Linux/Windows/Switches)
+        |  agents / SNMP
+        v
+   Zabbix Server ----------------> Zabbix DB (PostgreSQL)
+        |  alerts
+        v
+   Grafana ------> +--------------------+     Loki ----> Promtail ---> logs from hosts
+                    | Zabbix datasource  |
+                    +--------------------+     v
+                                             Prometheus (optional)
+                                             Alertmanager (optional)
 ```
 
 ## Roadmap
@@ -95,7 +96,7 @@ sudo systemctl enable --now zabbix-agent
 
 **Windows:** download the Zabbix agent MSI and install with `SERVER=<ip>`.
 
-- [ ] Add hosts in the Zabbix web UI under **Data collection РІвЂ вЂ™ Hosts**
+- [ ] Add hosts in the Zabbix web UI under **Data collection �� ’ Hosts**
 - [ ] Link the template (e.g. "Linux by Zabbix agent", "Windows by Zabbix agent")
 - [ ] Verify green availability and metrics within ~1 minute
 

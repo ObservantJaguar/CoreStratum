@@ -43,20 +43,22 @@ This guide assumes **FreePBX** (most documentation) and notes VitalPBX differenc
 - A dedicated VM or a small server (2 GB RAM, 2 vCPU minimum; 4 GB more comfortable)
 - A static IP or a stable domain for remote admin (optional)
 - A SIP provider if you need external calls (or just internal PBX)
-- Firewall: UDP 5060/5061 (SIP/TLS), UDP 10000РІР‚вЂњ20000 (RTP media), 8089 (WebRTC), 80/443 (admin)
+- Firewall: UDP 5060/5061 (SIP/TLS), UDP 10000�“20000 (RTP media), 8089 (WebRTC), 80/443 (admin)
 
 ## Architecture
 
 ```
-   РІвЂќРЉРІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќС’        РІвЂќРЉРІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќС’        РІвЂќРЉРІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќС’
-   РІвЂќвЂљ Browser  РІвЂќвЂљ WebRTC РІвЂќвЂљ                          РІвЂќвЂљ  SIP   РІвЂќвЂљ  SIP trunk  РІвЂќвЂљ
-   РІвЂќвЂљ softphoneРІвЂќвЂљРІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂ“С”РІвЂќвЂљ   FreePBX / VitalPBX    РІвЂќвЂљРІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂ“С”РІвЂќвЂљ (operator)  РІвЂќвЂљ
-   РІвЂќвЂљ (JitsiРІР‚В¦) РІвЂќвЂљ        РІвЂќвЂљ   РІвЂќвЂќРІвЂќР‚ Asterisk            РІвЂќвЂљ        РІвЂќвЂќРІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќВ
-   РІвЂќвЂќРІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќВ        РІвЂќвЂљ   РІвЂќвЂќРІвЂќР‚ MySQL/MariaDB        РІвЂќвЂљ
-   РІвЂќРЉРІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќС’        РІвЂќвЂљ   РІвЂќвЂќРІвЂќР‚ Web admin (HTTPS)    РІвЂќвЂљ
-   РІвЂќвЂљ Mobile   РІвЂќвЂљ  SIP   РІвЂќвЂљ                          РІвЂќвЂљ
-   РІвЂќвЂќРІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќВРІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂ“С”РІвЂќвЂљ                          РІвЂќвЂљ
-                        РІвЂќвЂќРІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќВ
+ +----------------+         +--------------------------------------+         +--------------+
+ |    Browser     |  WebRTC |                                      |   SIP   |     SIP      |
+ |   softphone    |-------->|         FreePBX / VitalPBX           |-------->|  (operator)  |
+ |   (Jitsi...)   |   SIP   |              \--- Asterisk           |  trunk  |              |
+ +--------+-------+         |              \--- MySQL/MariaDB      |         +--------------+
+          |                 |              \--- Web admin (HTTPS)  |
+          |   SIP           +--------------------------------------+
+ +--------+-------+
+ |    Mobile      |
+ |                |
+ +----------------+
 ```
 
 ## Roadmap
@@ -77,7 +79,7 @@ The simplest path is to install the PBX as the whole OS (FreePBX distro or Vital
 
 ### Stage 3 — Create extensions (users)
 
-In FreePBX: **Applications РІвЂ вЂ™ Extensions**, choose **PJSIP** (modern) or **CHAN_SIP** (legacy).
+In FreePBX: **Applications �� ’ Extensions**, choose **PJSIP** (modern) or **CHAN_SIP** (legacy).
 
 - [ ] Create one extension per employee (e.g. 200, 201, 202...)
 - [ ] Set the secret (SIP password) and voicemail PIN
@@ -85,7 +87,7 @@ In FreePBX: **Applications РІвЂ вЂ™ Extensions**, choose **PJSIP** (mod
 
 ### Stage 4 — WebRTC softphones
 
-- [ ] Enable the WebRTC module (FreePBX: **Settings РІвЂ вЂ™ WebRTC**, or use "FreePBX WebRTC" app)
+- [ ] Enable the WebRTC module (FreePBX: **Settings �� ’ WebRTC**, or use "FreePBX WebRTC" app)
 - [ ] Configure the API to use HTTPS (a domain + Let's Encrypt from the Traefik/TLS layer)
 - [ ] Connect a WebRTC client (e.g. **Jitsi Meet phone**, **WebRTC Softphone**, or the built-in browser client)
 - [ ] Test an internal call between two extensions
@@ -99,14 +101,14 @@ In FreePBX: **Applications РІвЂ вЂ™ Extensions**, choose **PJSIP** (mod
 ### Stage 6 — Voicemail, IVR, queues
 
 - [ ] Assign voicemail box to each extension (done in Stage 3)
-- [ ] Create an **IVR** for the main number (Applications РІвЂ вЂ™ IVR)
+- [ ] Create an **IVR** for the main number (Applications �� ’ IVR)
 - [ ] Create a **Ring Group** and a **Call Queue** for department phones
 - [ ] Test: call the main number, follow the IVR, land in the queue
 
 ### Stage 7 — SIP trunk (external calls)
 
 - [ ] Sign up with a SIP trunk provider (choose one that supports Asterisk)
-- [ ] In FreePBX: **Connectivity РІвЂ вЂ™ Trunks**, add a SIP trunk with provider credentials
+- [ ] In FreePBX: **Connectivity �� ’ Trunks**, add a SIP trunk with provider credentials
 - [ ] Configure outbound routes (which extensions may call outside) and inbound routes (map the DID to the IVR/queue)
 - [ ] Test an external call
 
@@ -131,11 +133,11 @@ In FreePBX: **Applications РІвЂ вЂ™ Extensions**, choose **PJSIP** (mod
 
 | Symptom | Likely cause | Fix |
 |---|---|---|
-| Phone registers but calls dead | RTP port range blocked or NAT | Open UDP 10000РІР‚вЂњ20000; set STUN/provided NAT handling in the client |
+| Phone registers but calls dead | RTP port range blocked or NAT | Open UDP 10000�“20000; set STUN/provided NAT handling in the client |
 | One-way audio | NAT asymmetric audio | Enable symmetric RTP; set up STUN/TURN in the PBX |
 | WebRTC won't connect | Browser requires HTTPS | Use a domain + Let's Encrypt for the WebRTC API endpoint |
-| External calls fail | SIP trunk or route not set | Check trunk status (Connectivity РІвЂ вЂ™ Trunks), outbound route, provider docs |
-| Incoming calls dumped to operator | Inbound route missing | Create inbound route DID РІвЂ вЂ™ IVR/queue/extension |
+| External calls fail | SIP trunk or route not set | Check trunk status (Connectivity �� ’ Trunks), outbound route, provider docs |
+| Incoming calls dumped to operator | Inbound route missing | Create inbound route DID �� ’ IVR/queue/extension |
 
 ## Related pages
 

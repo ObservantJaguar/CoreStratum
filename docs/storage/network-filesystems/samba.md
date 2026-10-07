@@ -9,4 +9,4 @@ Samba implements the Server Message Block (SMB/CIFS) protocol on Unix-like syste
 
 ## Resources
 
-- [Samba вЂ” samba.org](https://www.samba.org)
+- [Samba — samba.org](https://www.samba.org)

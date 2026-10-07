@@ -9,4 +9,4 @@ Lustre is a high-performance, massively parallel distributed filesystem widely u
 
 ## Resources
 
-- [Lustre вЂ” lustre.org](https://www.lustre.org)
+- [Lustre — lustre.org](https://www.lustre.org)

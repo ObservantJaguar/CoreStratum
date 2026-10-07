@@ -9,4 +9,4 @@ BeeGFS is a parallel, cluster filesystem designed for high-performance computing
 
 ## Resources
 
-- [BeeGFS вЂ” beegfs.io](https://www.beegfs.io)
+- [BeeGFS — beegfs.io](https://www.beegfs.io)

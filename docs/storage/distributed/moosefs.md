@@ -9,4 +9,4 @@ MooseFS is a fault-tolerant, distributed network filesystem that presents multip
 
 ## Resources
 
-- [MooseFS вЂ” moosefs.com](https://moosefs.com)
+- [MooseFS — moosefs.com](https://moosefs.com)

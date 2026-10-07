@@ -1,0 +1,31 @@
+remote_theme: just-the-docs/just-the-docs@v0.8.2
+
+title: CoreStratum
+description: An open-source encyclopedia of open technologies for systems administrators and DevOps engineers.
+
+url: "https://observantjaguar.github.io"
+baseurl: "/CoreStratum"
+
+permalink: pretty
+color_scheme: light
+
+aux_links:
+  "CoreStratum on GitHub":
+    - "https://github.com/ObservantJaguar/CoreStratum"
+
+nav_sort: case_insensitive
+back_to_top: true
+last_edit_timestamp: true
+
+collections:
+  docs:
+    output: true
+
+just_the_docs:
+  navigation_depth: 4
+
+plugins:
+  - jekyll-remote-theme
+  - jekyll-seo-tag
+  - jekyll-sitemap
+  - jekyll-relative-links

@@ -29,7 +29,6 @@ Browse the sidebar or the table of contents below. Pick the domain that matches 
 - [Linux](operating-systems/linux/index.md)
 - [BSD](operating-systems/bsd/index.md)
 - [illumos](operating-systems/illumos/index.md)
-- [Windows Server](operating-systems/windows-server/index.md)
 - [RTOS](operating-systems/rtos/index.md)
 
 ## 3. Virtualization and Compute
@@ -136,3 +135,4 @@ Browse the sidebar or the table of contents below. Pick the domain that matches 
 ## 15. Message Brokers
 - [RabbitMQ](message-brokers/rabbitmq.md)
 - [Apache Kafka](message-brokers/kafka.md)
+- [NATS](message-brokers/nats.md)

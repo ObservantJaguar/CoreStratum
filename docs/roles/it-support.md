@@ -25,7 +25,7 @@ IT Support is the first line of the IT department: it receives user requests, ke
 ### End-user hardware and OS
 
 - Linux desktops: [Debian](../operating-systems/linux/distributions/debian.md), [Ubuntu Server/Desktop](../operating-systems/linux/distributions/ubuntu-server.md).
-- Windows workstations: [Windows Server ecosystem](../operating-systems/windows-server/index.md) and domain-joined clients.
+- Windows workstations in mixed environments: domain-joined clients via [Samba AD DC](../security/directory-services/samba4.md).
 - Imaging and disk management: [LVM](../storage/block/lvm.md), [ZFS snapshots](../storage/backup/zfs-snapshots.md) for workstation backups.
 
 ### Accounts and access

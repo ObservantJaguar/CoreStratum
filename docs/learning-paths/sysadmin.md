@@ -16,7 +16,6 @@ Read the [System Administrator role card](../roles/sysadmin.md): the job duties,
 - **Linux administration**: [installation, filesystem, users, permissions, services](../operating-systems/linux/index.md).
 - **The shell**: [Bash scripting](../development/programming-languages/shell.md), cron, log analysis.
 - **Networking fundamentals**: [TCP/IP, DNS, DHCP, TLS](../foundations/protocols/index.md), subnetting, routing basics.
-- **Windows basics** (for mixed environments): user management, RDP, Active Directory concepts.
 
 **Milestone:** you can install a Linux server, configure networking and users, and administer it remotely via SSH.
 

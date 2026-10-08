@@ -11,3 +11,4 @@ Message brokers provide asynchronous communication between services: producers p
 
 - [RabbitMQ](rabbitmq.md) — universal multi-protocol message broker (AMQP).
 - [Apache Kafka](kafka.md) — distributed streaming platform for high-throughput data pipelines.
+- [NATS](nats.md) — lightweight cloud-native messaging with JetStream streaming.

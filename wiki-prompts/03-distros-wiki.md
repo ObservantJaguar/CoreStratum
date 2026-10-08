@@ -1,143 +1,84 @@
-# Тематическая инструкция: wiki «Дистрибутивы и рабочие столы»
+# Тематическая инструкция: wiki «Zelirion» — каталог дистрибутивов и сборка ISO
 
-> **Как использовать:** объедините с общим шаблоном `00-template.md` — сначала шаблон (структура, конфиги, правила кодировки), затем эта тематическая часть. Скопируйте в новый чат MultiTool.
+> **Как использовать:** объедините с общим шаблоном `00-template.md` — сначала вставьте шаблон (структура репозитория, конфиги Jekyll, правила кодировки, работа с Git), затем эту тематическую часть. Скопируйте весь текст в новый чат MultiTool.
 
-## Тема и назначение
+## Что это за проект
 
-Постройте англоязычную wiki-энциклопедию о **Linux/FreeBSD/illumos дистрибутивах** и **окружениях рабочего стола (Desktop Environments)**. Категории: серверные дистрибутивы, десктопные, специализированные; все основные DE (GNOME, KDE Plasma, Xfce, LXQt, Cinnamon, MATE, i3wm/wayland-композиторы и т.д.). Для администраторов, инженеров и энтузиастов open-source.
+**Zelirion** — это семейство дистрибутивов (meta-distribution): единая архитектура сборки, которая генерирует ISO-образы с разными Desktop Environment (DE) на разных платформах:
 
-## Важные принципы содержания
+- **Linux (Devuan)** — классическая UNIX-архитектура без systemd (elogind, eudev, sysvinit/OpenRC/runit), полный X11, частичный Wayland.
+- **FreeBSD** — полный X11, частичный Wayland.
+- **illumos (OpenIndiana / OmniOS)** — Solaris-подобная UNIX, полный X11, без Wayland.
 
-- **Дистрибутив** — это не «ПО», а цельная операционная система: ядро + пакетный менеджер + окружение + сообщество. Страницу строить вокруг: семейство, пакетный менеджер, init system, целевая аудитория, особенности, минимальные требования.
-- **DE/WM** — отдельные программы для пользовательского интерфейса (GNOME Shell, KWin, Mutter/Wayland...). У каждого DE — компоненты (композитор, файловый менеджер, эмодзи нет, терминал).
-- Разделяйте: дистрибутив, DE, window manager (WM). Не смешивать.
-- Помечайте статус: active/спящий, стабильный/rolling, официальный/community, open-source/с проприетарными драйверами.
+Поддерживаемые DE: Xfce, Cinnamon, Deepin, LXQt, MATE, KDE Plasma, Budgie, UKUI, Trinity TDE, Lumina, EDE, CuteFish, Maui Shell, COSMIC, PaperDE, SonicDE, Liri, Phosh, Plasma Mobile, Glacier, JingOS, Lomiri, Enlightenment, Pantheon.
 
-## Структура в трёх классах
+Текущее состояние: проект в early development, ISO ещё не публиковались. Репозиторий: https://github.com/ObservantJaguar/Zelirion
 
-### Theory (теория и концепции)
+## Какую wiki надо построить
 
-- **Linux basics** — ядро, дистрибутив, bootloader, init system, пакетные менеджеры (dpkg/apt, rpm/dnf, pacman, zypper).
-- **Семейства дистрибутивов** — Debian-семейство, Red Hat/Fedora-семейство, Arch, Gentoo, SUSE; независимые (Alpine, NixOS, Void).
-- **FreeBSD и illumos** — история, отличия (jails, ZFS, pf), когда использовать.
-- **X11 vs Wayland** — протоколы отображения, композиторы, совместимость, XWayland.
-- **Desktop environments vs window managers** — что такое DE, что такое WM (stacking/tiling), compositor, сессии.
-- **Display servers и композиторы** — Xorg, Weston, Mutter, KWin, sway/hyprland (Wayland).
+**Сайт-каталог Zelirion** (Jekyll + Just the Docs, GitHub Pages): страница семейства + полный каталог ISO по платформам и DE + таблицы имён сборок + дорожная карта + техническая документация по build system.
 
-### Tools (энциклопедия дистрибутивов и DE)
+В отличие от энциклопедической wiki, контент здесь — **практический**: какой ISO скачать, что внутри, как собрать, как обновляется.
 
-**Категория «Distributions»** (по семействам):
+## Структура (в трёх классах Theory/Tools/Practice — тот же шаблон)
 
-- **Debian family**: Debian, Ubuntu (LTS/desktop/server), Linux Mint, LMDE, Devuan, MX Linux, Kali, Raspberry Pi OS, Parrot, PureOS.
-- **Red Hat family**: RHEL, Fedora, CentOS Stream, Rocky Linux, AlmaLinux, Oracle Linux.
-- **Arch family**: Arch Linux, EndeavourOS, CachyOS, Manjaro.
-- **Independent**: Alpine, NixOS, Void, Solus, Gentoo, openSUSE (Tumbleweed/Leap), Slackware, Qubes OS (security), Tiny Core.
-- **BSD/illumos**: FreeBSD, OpenBSD, NetBSD, DragonFly BSD, GhostBSD; illumos (OpenIndiana, SmartOS), TrueNAS CORE.
+### Theory (концепции)
 
-**Категория «Desktop Environments»** (каждая страница — DE со списком компонентов):
+- **Zelirion overview** — что такое meta-distribution, зачем единая архитектура сборки.
+- **Платформы** — Devuan (why no systemd, elogind/eudev/sysvinit/OpenRC), FreeBSD, illumos.
+- **X11 vs Wayland** — что поддерживается где (Devuan: X11 полный, Wayland частично; FreeBSD: частично; illumos: без Wayland), Wayland-only DE в X11 fallback.
+- **Мобильные DE на десктопе** — Phosh, Plasma Mobile, Glacier, JingOS, Lomiri; концепция «телефон на десктопе».
 
-- GNOME, KDE Plasma, Xfce, LXQt, LXDE, MATE, Cinnamon, Budgie, Pantheon, Deepin DE, Trinity, Enlightenment.
+### Tools (каталог дистрибутивов/ISO)
 
-**Категория «Window Managers»**:
+Структура каталога — по платформам, внутри — по DE. На каждую комбинацию — страница.
 
-- Tiling: i3, Sway (Wayland), Hyprland, bspwm, dwm, awesome, river.
-- Stacking: Openbox, Fluxbox, IceWM, JWM.
+**Linux (Devuan):** KDE Plasma (build name Aurora), Xfce (Zentora), LXQt (Quarisa), MATE (Verdina), Cinnamon (Cinnara), Deepin (Divira), Budgie (Avira), UKUI (Kalira), Enlightenment (Enlira), EDE (Edessa), Liri (Lirena), CuteFish (Cutora), Pantheon (Pantara), Lumina (Lumera), Trinity TDE (Trinira), SonicDE (Sonira), Plasma Mobile (Novara), Phosh (Fosira), Glacier (Glafira), Lomiri (Lomira), JingOS (Jingara), PaperDE (Papira), Maui Shell (Mauira).
 
-**Категория «Display servers/compositors»**:
+**FreeBSD:** KDE Plasma (Crestara), Xfce (Valora), LXQt (Arlissa), MATE (Virelina), Lumina (Lumenia), Trinity TDE (Tavira), Enlightenment (Entrisa), UKUI (Kavera), EDE (Edrina).
 
-- Xorg, Wayland, Weston, Mutter, KWin, sway, Hyprland, picom (compositor X11).
+**illumos:** KDE Plasma (Zalvira), Xfce (Arvessa), LXQt (Sylvira), MATE (Viresta), Trinity TDE (Solviera).
 
-**Категория «Пакетные менеджеры»** (инструменты):
+Правила страниц в каталоге:
 
-- APT, dpkg, DNF, RPM, pacman, zypper, Portage, xbps, apk, nix; Flatpak, Snap, AppImage (как универсальные форматы).
+- Title страницы: `Zelirion <Build Name>` (например `Zelirion Aurora`), а НЕ с маркой «KDE».
+- **Торговые марки (GNOME, KDE, Debian и т.д.) не использовать в названиях сборок.** Реальный DE указывается только описательно в тексте/подписи: `DE: KDE Plasma (descriptive reference, not part of the name)`.
+- На странице: описание, платформа, DE (подпись), статус сборки, ссылка на скачивание ISO (из Releases), дата релиза, размер, архитектура, требования, screenshot (если есть).
+- По каждой платформе — обзорная страница (Devuan/FreeBSD/illumos) с таблицей всех DE-сборок.
 
-**Категория «Системные инструменты/утилиты»** (по нашей философии — только программные продукты): systemd, GRUB, systemd-boot, NetworkManager, PulseAudio/PipeWire, etc.
+### Practice (руководства и документация build system)
 
-### Practice (практические руководства)
+- **Build system architecture** — описание модульной схемы сборки (`build/`, `configs/`, `iso/`), как генерируются ISO по DE.
+- **Сборка одного ISO** — пошаговый гайд: как собрать конкретную DE (конфиг, live-build на Debian/Devuan).
+- **Публикация через GitHub Actions + Releases** — автоматизация: расписание, пересборка при апстрим-обновлении, загрузка в Releases, генерация каталога.
+- **Добавление нового DE** — как расширить матрицу (build script, config, имя по схеме).
+- **Разработка под мобильные платформы** — GSM/modem stack (ModemManager, ofono, libqmi, libmbim), ARM64.
 
-- Как выбрать дистрибутив под сервер/десктоп (чек-лист).
-- Установка Ubuntu Server / Debian / Fedora (базовые шаги, разделы, LVM).
-- Установка и настройка конкретного DE (например, KDE Plasma или GNOME) на уже стоящий дистрибутив.
-- Установка и настройка tiling WM (i3/Sway/Hyprland) — конфигурация.
-- Как включить Wayland и чем он отличается на практике.
-- Настройка пакетного менеджера (APT/DNF) — репозитории, обновления.
-- FreeBSD: установка, jails, ZFS; illumos: зоны, SMF.
-- Dual-boot, резервное копирование системы (Timeshift), восстановление.
+## Ключевые технические решения (передайте в чат)
 
-## Рекомендуемая структура доменов
+### Схема имён сборок (не использующая чужие марки)
 
-```
-docs/
-├── sections/ (theory/tools/practice)
-├── theory/          → категории: linux-basics, distro-families, bsd-illumos, x11-wayland, de-vs-wm
-├── distributions/
-│   ├── debian-family/   (страницы по каждой)
-│   ├── redhat-family/
-│   ├── arch-family/
-│   ├── independent/
-│   └── bsd/branch       (или отдельный домен bsd/illumos)
-├── desktop-environments/  → gnome, kde-plasma, xfce, cinnamon, ...
-├── window-managers/       → i3, sway, hyprland, openbox, ...
-├── display-servers/       → xorg, wayland, mutter, kwin, ...
-├── package-managers/      → apt, dnf, pacman, flatpak, ...
-├── system-tools/          → systemd, grub, networkmanager, pipewire (опционально)
-└── guides/                → практические руководства
-```
+Семейство **Zelirion**, каждая сборка — **Zelirion + собственное имя** (Aurora, Zentora, Verdina...). Торговые марки DE — только как описательные подписи, не в названиях. Если в таблице имён из README нет имени для какого-то DE — предложить по схеме: короткое слово, оканчивающееся на -a/-ra/-ara, созвучное DE (например Cinnamon→Cinnara), но не совпадающее с маркой.
 
-## Ключевые шаблоны страниц
+### Публикация ISO: GitHub Actions + Releases
 
-**Дистрибутив:**
+- **Releases** — хостинг ISO (до 2 ГБ на файл), ссылки из каталога.
+- **GitHub Actions (workflow)** — сборка по расписанию (cron) и по пушу в апстрим-репозитории DE:
+  - Проверить новую версию DE (например, релиз KDE Plasma).
+  - Запустить build script для этой платформы+DE.
+  - Загрузить готовый ISO в Releases с тегом, соответствующим версии.
+  - Обновить страницы каталога (генерировать из данных).
+- **Лимиты:** ~2000 минут/мес бесплатно на публичный репозиторий; следить за расходом.
+- Workflow-файлы — в `.github/workflows/` (YAML).
 
-```markdown
----
-title: <Дистрибутив>
-parent: <Семейство>
-grand_parent: Tools
----
+### Каталог, генерируемый из данных (рекомендация)
 
-# <Дистрибутив>
-
-Одно-два предложения: происхождение, на чём основан, цель.
-
-## Key features
-- Пакетный менеджер: <apt/dnf/pacman...>
-- Init: <systemd/OpenRC...>
-- Модель релизов: <stable/rolling>
-- Поддерживаемые архитектуры: <amd64, arm64...>
-- Целевая аудитория: <server/desktop/embedded/security>
-
-## Resources
-- [Официальный сайт](URL)
-- [Документация](URL)
-```
-
-**Desktop Environment:**
-
-```markdown
----
-title: <Название DE>
-parent: Desktop Environments
-grand_parent: Tools
----
-
-# <Название DE>
-
-Два-три предложения: что это, базовое окружение, ключевые компоненты.
-
-## Key components
-- Compositor / display server: Mutter, KWin, ...
-- Файловый менеджер: Files (Nautilus), Dolphin, Thunar, ...
-- Терминал, настройки, панель/док: ...
-- Поддержка Wayland: да/частично/нет
-
-## Resources
-- [Официальный сайт](URL)
-```
+Держать матрицу сборок как данные (например `_data/zelirion.yml`): платформа, DE, build name, статус, ссылка на release. Страницы каталога и таблицы — рендерить из этих данных (Liquid), чтобы при апдейте ISO обновлялась одна сущность, а не 20 страниц вручную.
 
 ## Процесс
 
-1. Возьмите структуру и конфиги из шаблона `00-template.md`.
-2. Создайте TOC (index.md) с доменами выше.
-3. Наполняйте партиями: Family → дистрибутивы (списком страниц), DE → страницы, WM → страницы.
-4. Прогоните чек-лист: ссылки, front matter, кодировка, сборка.
-5. Push на GitHub.
+1. Скопируйте `00-template.md` + эту инструкцию в новый чат.
+2. Ассистент: (а) изучает репозиторий Zelirion (README, структуру, build-скрипты), (б) проектирует структуру wiki-каталога, (в) создаёт репозиторий/папку сайта по шаблону.
+3. Наполнение: overview → платформы → каталог DE (по данным) → практические гайды по сборке.
+4. Настройка GitHub Actions workflow для сборки/публикации ISO.
+5. Прогон чек-листа из шаблона (ссылки, front matter, кодировка, сборка) и push.

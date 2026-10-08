@@ -7,6 +7,14 @@ parent: IT Roles
 
 The Data Engineer builds and operates the data flows: extracting data from sources, transforming it, loading it into warehouses or analytical stores, and keeping the pipelines observable and correct. The role sits between the operational databases a DBA runs and the analysis a data analyst performs. This page maps the role into its responsibility domains and the concrete technologies that belong to each one.
 
+## Job duties
+
+1. Build and operate extraction pipelines from source systems ([Extraction and pipelines](#extraction-and-pipelines)).
+2. Transform and process data into analytical shapes (ETL/ELT) ([Transformation and processing (ETL/ELT)](#transformation-and-processing-etl-elt)).
+3. Maintain warehouses and analytical or object storage ([Storage and warehouses](#storage-and-warehouses)).
+4. Manage data catalogs and lineage ([Data catalogs and governance](#data-catalogs-and-governance)).
+5. Enforce data quality and pipeline observability ([Data quality and observability](#data-quality-and-observability)).
+
 ## Responsibility domains
 
 ### Extraction and pipelines

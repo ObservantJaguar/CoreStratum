@@ -7,6 +7,16 @@ parent: IT Roles
 
 SRE applies software engineering to operations: reliability is defined by measurable Service Level Objectives (SLOs) and error budgets, and the engineer owns detection, mitigation and prevention end to end. This page maps the role into its responsibility domains and the concrete technologies that belong to each one.
 
+## Job duties
+
+1. Define and maintain SLOs and error budgets for core services ([SLO and error budgets](#slo-and-error-budgets)).
+2. Build observability: metrics, dashboards, logs, tracing ([Observability](#observability)).
+3. Run incident response and postmortems end to end ([Incident response](#incident-response)).
+4. Plan capacity and performance, including autoscaling and load testing ([Capacity and performance](#capacity-and-performance)).
+5. Automate toil reduction and reliability engineering ([Automation and reliability engineering](#automation-and-reliability-engineering)).
+6. Review architectures for failure tolerance and reliability ([Automation and reliability engineering](#automation-and-reliability-engineering)).
+7. Write automation and tooling in Go, Python or Shell ([Languages](#languages)).
+
 ## Responsibility domains
 
 ### SLO and error budgets

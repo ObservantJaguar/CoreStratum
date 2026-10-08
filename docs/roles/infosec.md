@@ -7,6 +7,15 @@ parent: IT Roles
 
 InfoSec is the security program owner: it writes the policies, runs the audit evidence, and leads incident response end to end. Where SecOps operates the detection tooling, InfoSec decides what is protected, how to respond when something happens, and how to prove compliance. This page maps the role into its responsibility domains and the concrete technologies that belong to each one.
 
+## Job duties
+
+1. Write and maintain security policies, standards and procedures ([Policy and governance](#policy-and-governance)).
+2. Operate monitoring, SIEM and endpoint protection ([Monitoring and endpoint protection](#monitoring-and-endpoint-protection)).
+3. Lead incident response end to end ([Incident response](#incident-response)).
+4. Perform digital forensics on affected systems ([Digital forensics](#digital-forensics)).
+5. Run audits and collect compliance evidence ([Audit and compliance evidence](#audit-and-compliance-evidence)).
+6. Manage cryptography and secrets hygiene ([Cryptography and secrets hygiene](#cryptography-and-secrets-hygiene)).
+
 ## Responsibility domains
 
 ### Policy and governance

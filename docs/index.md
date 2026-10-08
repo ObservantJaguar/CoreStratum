@@ -23,6 +23,7 @@ Browse the sidebar or the table of contents below. Pick the domain that matches 
 - [Learning](foundations/learning/index.md)
 - [People](foundations/people/index.md)
 - [IT Roles](roles/index.md)
+- [Learning Paths](learning-paths/index.md)
 
 ## 2. Operating Systems
 - [Linux](operating-systems/linux/index.md)
@@ -131,3 +132,7 @@ Browse the sidebar or the table of contents below. Pick the domain that matches 
 - [ECM/EDMS — Content and Document Management](engineering/ecm-edms/index.md)
 - [PMS — Project Management and Bug Tracking](engineering/pms/index.md)
 - [SRM — Collaboration and Supply Management](engineering/srm/index.md)
+
+## 15. Message Brokers
+- [RabbitMQ](message-brokers/rabbitmq.md)
+- [Apache Kafka](message-brokers/kafka.md)

@@ -32,6 +32,15 @@ Each profile covers:
 - [IT Support / Helpdesk](it-support.md)
 - [InfoSec / Incident Response](infosec.md)
 
+### Software development
+
+- [Software Engineer](software-engineer.md) — the umbrella role for anyone writing production code.
+- [Frontend Developer](frontend.md) — UI and browser-side development.
+- [Backend Developer](backend.md) — server logic, APIs, databases (Python/Java/Go/C# variants).
+- [Fullstack Developer](fullstack.md) — both frontend and backend in one role.
+
+> **Note:** language-specific titles (Python developer, Java developer, Go developer...) are specializations of the Backend role with the same responsibility domains - see the Backend card for the shared map.
+
 ## How to use
 
-For hire: decide which role your task actually maps to, then compare the candidate against the "Out of scope" and "Typical stack" sections. For yourself: identify your current scope, then follow the "Career path" to see the next step.
+For hire: decide which role your task actually maps to, then compare the candidate against the "Out of scope" and "Responsibility domains" sections. For yourself: identify your current scope, then follow the "Career path" to see the next step - or open the matching [learning path](../learning-paths/index.md).

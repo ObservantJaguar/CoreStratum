@@ -7,6 +7,15 @@ parent: IT Roles
 
 The Cloud Engineer builds and operates infrastructure on cloud platforms — AWS, Azure, GCP or private clouds like OpenStack. The role combines infrastructure as code, cloud-native services and cost/resilience thinking, and often overlaps with DevOps and Platform roles depending on the company. This page maps the role into its responsibility domains and the concrete technologies that belong to each one.
 
+## Job duties
+
+1. Provision cloud infrastructure: VPCs, VMs, storage, IAM ([IaaS provisioning](#iaas-provisioning)).
+2. Manage infrastructure as code and image building ([Infrastructure as Code](#infrastructure-as-code)).
+3. Design and operate cloud networking and hybrid connectivity ([Cloud networking](#cloud-networking)).
+4. Run container orchestration on managed or self-managed clusters ([Container orchestration in the cloud](#container-orchestration-in-the-cloud)).
+5. Optimize cloud spend and right-size resources ([Cost and FinOps](#cost-and-finopps)).
+6. Plan and execute workload migrations to the cloud ([Migration](#migration)).
+
 ## Responsibility domains
 
 ### IaaS provisioning

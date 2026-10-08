@@ -7,6 +7,16 @@ parent: IT Roles
 
 The Database Administrator owns the databases: installation, configuration, performance, backups, replication and user access. The role is distinct from a developer because its success is measured by availability, integrity and recoverability rather than by features. This page maps the role into its responsibility domains and the concrete technologies that belong to each one.
 
+## Job duties
+
+1. Install, configure and upgrade database engines ([Relational database engines](#relational-database-engines)).
+2. Operate backup and recovery for all databases ([Backups and recovery](#backups-and-recovery)).
+3. Set up and maintain replication and high availability ([Replication and high availability](#replication-and-high-availability)).
+4. Tune query performance and monitor databases ([Performance and monitoring](#performance-and-monitoring)).
+5. Manage schema migrations and data layout ([Storage and layout](#storage-and-layout)).
+6. Administer users, roles and access rights ([Relational database engines](#relational-database-engines)).
+7. Maintain cache and document stores alongside relational engines ([In-memory and NoSQL adjacents](#in-memory-and-nosql-adjacents)).
+
 ## Responsibility domains
 
 ### Relational database engines

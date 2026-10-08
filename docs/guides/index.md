@@ -11,29 +11,41 @@ Beyond the encyclopedia of individual tools, this section contains practical **r
 
 A guide is not a copy-paste manual for one tool. It is a **route map**: the goal, the architecture, the ordered stages with checklists, and how to verify the result. Where a tool already has a page in the encyclopedia, the guide links to it instead of repeating the description.
 
+The guides are grouped by the **IT role** they serve (see [IT Roles](../roles/index.md) for the responsibility maps behind these groupings).
+
 ## Available guides
 
-### Foundation layer
+### For System Administrators
 
+- [Backup with restic and Borg](backup-restic-borg.md) — protecting servers and container data with deduplicated, encrypted, offsite backups.
+- [Mail Server](mail-server.md) — Postfix, Dovecot, Rspamd and full SPF/DKIM/DMARC setup for a small domain.
 - [Docker Host with Traefik](docker-host-traefik.md) — the base layer: one server running containers behind a reverse proxy with automatic TLS.
-- [Backup with restic and Borg](backup-restic-borg.md) — protecting all of the above with deduplicated, encrypted, offsite backups.
+- [Nextcloud and CRM](nextcloud-crm.md) — corporate file cloud and document collaboration, plus a CRM you host yourself.
 
-### Corporate services
+### For DevOps Engineers
+
+- [Docker Host with Traefik](docker-host-traefik.md) — containerized services behind a reverse proxy with automatic TLS.
+- [Git Server with Gitea](git-server-gitea.md) — self-hosted Git hosting with CI basics.
+- [Monitoring and Logging](monitoring-logging.md) — Zabbix and Grafana for metrics, Loki for centralized logs (also relevant to SREs).
+
+### For SecOps and Security
+
+- [Backup with restic and Borg](backup-restic-borg.md) — encryption and key management, the security baseline of every deployment.
+
+### For SMB generalists ("one-person IT department")
 
 - [Mail Server](mail-server.md) — Postfix, Dovecot, Rspamd and full SPF/DKIM/DMARC setup for a small domain.
 - [Matrix Messenger](matrix-messenger.md) — self-hosted corporate messenger with voice and video calls (Synapse, Element, coturn).
 - [XMPP Messenger](xmpp-messenger.md) — lightweight, fully decentralized messaging with audio and video (ejabberd, Jingle, coturn).
 - [Nextcloud and CRM](nextcloud-crm.md) — corporate file cloud and document collaboration, plus a CRM you host yourself.
 - [IP Telephony](ip-telephony.md) — PBX on open-source software (FreePBX / VitalPBX) with WebRTC softphones.
-
-### DevOps layer
-
 - [Monitoring and Logging](monitoring-logging.md) — Zabbix and Grafana for metrics, Loki for centralized logs.
-- [Git Server with Gitea](git-server-gitea.md) — self-hosted Git hosting with CI basics.
+
+> **Tip:** many guides fit several roles. They are listed once per meaningful role, and the same guide may appear in two groups when the overlap is real (for example Docker Host with Traefik for both sysadmins and DevOps).
 
 ### Short recipes
 
-- [Recipes](recipes/index.md) — quick single-purpose tasks: SSH keys, firewall rules, LVM, cron/systemd timers, DNS diagnostics, snapshots and more.
+- [Recipes](recipes/index.md) — quick single-purpose tasks for any role: SSH keys, firewall rules, LVM, cron/systemd timers, DNS diagnostics, snapshots and more.
 
 ## Guide template
 

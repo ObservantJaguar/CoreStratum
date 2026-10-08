@@ -7,6 +7,14 @@ parent: IT Roles
 
 SecOps (Security Operations) is the practice of protecting the environment and responding to threats as they are detected. A Security Engineer designs, implements and operates the security controls: monitoring and detection, vulnerability management, access control and incident handling. This page maps the role into its responsibility domains and the concrete technologies that belong to each one.
 
+## Job duties
+
+1. Operate host and network detection, log aggregation and alerting ([Monitoring and detection](#monitoring-and-detection)).
+2. Run vulnerability scanning and prioritization ([Vulnerability management](#vulnerability-management)).
+3. Manage identity, access and least-privilege elevation ([Identity and access](#identity-and-access)).
+4. Apply hardening baselines and configuration audits ([Hardening and baselines](#hardening-and-baselines)).
+5. Respond to and triage security incidents ([Incident handling](#incident-handling)).
+
 ## Responsibility domains
 
 ### Monitoring and detection

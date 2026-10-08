@@ -7,6 +7,15 @@ parent: IT Roles
 
 IT Support is the first line of the IT department: it receives user requests, keeps laptops and desktops working, manages accounts and access, and handles the physical side of the office. In a small business this role is often combined with a junior sysadmin who also watches the video surveillance and issues access badges. This page maps the role into its responsibility domains and the concrete technologies that belong to each one.
 
+## Job duties
+
+1. Handle user tickets and IT requests ([Tickets and request management](#tickets-and-request-management)).
+2. Set up and maintain end-user hardware and operating systems ([End-user hardware and OS](#end-user-hardware-and-os)).
+3. Manage user accounts, access and password policies ([Accounts and access](#accounts-and-access)).
+4. Provide remote support and off-site access ([Remote access and VPN](#remote-access-and-vpn)).
+5. Maintain physical security in a small business: badges and surveillance ([Physical security (small business)](#physical-security-small-business)).
+6. Handle office networking basics and asset inventory ([Office networking (entry)](#office-networking-entry), [Tickets and request management](#tickets-and-request-management)).
+
 ## Responsibility domains
 
 ### Tickets and request management

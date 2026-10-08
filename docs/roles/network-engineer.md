@@ -7,6 +7,16 @@ parent: IT Roles
 
 The Network Engineer designs, implements and operates the network: routers, switches, firewalls, VPNs, load balancers and the protocols that move traffic between systems. In small companies this role is usually folded into the sysadmin position until the network grows complex enough to justify a specialist. This page maps the role into its responsibility domains and the concrete technologies that belong to each one.
 
+## Job duties
+
+1. Design and operate routing and switching for LAN/WAN ([Routing and switching](#routing-and-switching)).
+2. Configure and manage firewalls and network access control ([Firewalls](#firewalls)).
+3. Run site-to-site and remote-access VPNs ([VPN and remote access](#vpn-and-remote-access)).
+4. Balance traffic across services ([Load balancing](#load-balancing)).
+5. Operate DNS and DHCP infrastructure ([DHCP and DNS infrastructure](#dhcp-and-dns-infrastructure)).
+6. Diagnose and troubleshoot network issues ([Diagnostics and troubleshooting](#diagnostics-and-troubleshooting)).
+7. Maintain IPAM and network observability ([Network observability and IPAM](#network-observability-and-ipam)).
+
 ## Responsibility domains
 
 ### Routing and switching

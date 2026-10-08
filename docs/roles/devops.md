@@ -7,6 +7,16 @@ parent: IT Roles
 
 DevOps unifies development and operations: automate the delivery pipeline, shorten feedback loops, make releases predictable. As a job title it usually means the person who owns CI/CD, infrastructure-as-code, containers and application observability. Because the stack varies a lot between companies, this page maps the role into responsibility domains and the technologies that recur most often in real vacancies.
 
+## Job duties
+
+1. Build and maintain CI/CD pipelines for application delivery ([CI/CD](#cicd)).
+2. Own infrastructure as code for environments and releases ([Infrastructure as Code](#infrastructure-as-code), [Cloud platforms (often)](#cloud-platforms-often)).
+3. Manage container images and orchestrated workloads ([Containers and orchestration](#containers-and-orchestration)).
+4. Operate observability for deployed applications: metrics, logs, tracing ([Application observability](#application-observability)).
+5. Automate deployments, rollbacks and release feedback loops ([CI/CD](#cicd)).
+6. Script and maintain delivery tooling in Bash, Python or Go ([Scripting and languages](#scripting-and-languages)).
+7. Collaborate with developers and operations on the delivery pipeline ([CI/CD](#cicd)).
+
 ## Responsibility domains
 
 ### Containers and orchestration

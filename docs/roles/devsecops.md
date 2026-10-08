@@ -7,6 +7,14 @@ parent: IT Roles
 
 DevSecOps embeds security into the software delivery lifecycle instead of bolting it on at the end. The practitioner extends the DevOps pipeline with automated checks: scanning code, dependencies and container images for vulnerabilities, detecting secrets, and enforcing policy as code. This page maps the role into its responsibility domains and the concrete technologies that belong to each one.
 
+## Job duties
+
+1. Embed SAST and DAST checks into the delivery pipeline ([SAST and DAST](#sast-and-dast)).
+2. Scan dependencies and container images for vulnerabilities ([Dependency and image scanning](#dependency-and-image-scanning)).
+3. Centralize and protect secrets for applications and pipelines ([Secrets management](#secrets-management)).
+4. Enforce compliance and security policy as code ([Policy as code](#policy-as-code)).
+5. Harden the software supply chain and GitOps delivery ([Secure supply chain and GitOps](#secure-supply-chain-and-gitops)).
+
 ## Responsibility domains
 
 ### SAST and DAST

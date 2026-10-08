@@ -7,6 +7,16 @@ parent: IT Roles
 
 The QA / Test Automation Engineer verifies that software meets its requirements and does not regress, and automates as much of that verification as makes sense. The role spans manual exploration, automated unit to end-to-end tests, and performance/load testing. This page maps the role into its responsibility domains and the concrete technologies that belong to each one.
 
+## Job duties
+
+1. Write and maintain test plans and test cases ([Unit and integration testing](#unit-and-integration-testing)).
+2. Build unit, integration and end-to-end tests ([Unit and integration testing](#unit-and-integration-testing), [End-to-end and browser automation](#end-to-end-and-browser-automation)).
+3. Automate UI and API regression testing ([End-to-end and browser automation](#end-to-end-and-browser-automation)).
+4. Run load and performance testing ([Load and performance testing](#load-and-performance-testing)).
+5. Enforce code quality and static-analysis gates ([Code quality and static analysis](#code-quality-and-static-analysis)).
+6. Integrate tests into CI and report results ([CI integration and reporting](#ci-integration-and-reporting)).
+7. Provision isolated test environments ([Test environment provisioning](#test-environment-provisioning)).
+
 ## Responsibility domains
 
 ### Unit and integration testing

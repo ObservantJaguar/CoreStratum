@@ -7,6 +7,15 @@ parent: IT Roles
 
 The Platform Engineer builds the shared internal platform that developers (and other engineering teams) consume: a thin, standardized layer of Kubernetes clusters, golden paths, CI runners and self-service tools. Where DevOps ships applications and SRE guarantees them, the Platform Engineer owns the reusable substrate. This page maps the role into its responsibility domains and the concrete technologies that belong to each one.
 
+## Job duties
+
+1. Build the internal developer platform and golden paths ([Internal developer platform](#internal-developer-platform)).
+2. Own the cluster and infrastructure foundation for the platform ([Cluster and infrastructure foundation](#cluster-and-infrastructure-foundation)).
+3. Provide declarative GitOps delivery and platform secrets ([GitOps and delivery](#gitops-and-delivery)).
+4. Manage shared CI/CD runners and pipeline templates ([CI/CD runners and shared pipelines](#cicd-runners-and-shared-pipelines)).
+5. Maintain service mesh and platform connectivity ([Service mesh and connectivity](#service-mesh-and-connectivity)).
+6. Provide observability for platform components ([Platform observability](#platform-observability)).
+
 ## Responsibility domains
 
 ### Internal developer platform

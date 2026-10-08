@@ -5,7 +5,18 @@ parent: IT Roles
 
 # System Administrator
 
-The System Administrator keeps the infrastructure running day to day. In a small organization this role is famously broad: the same person covers servers, network basics, backups, mail, user accounts, and often hardware, surveillance and access badges. This page maps the role into its responsibility domains and the concrete technologies that belong to each one.
+The System Administrator keeps the infrastructure running day to day. In a small organization this role is famously broad: the same person covers servers, network basics, backups, mail, user accounts, and often hardware, surveillance and access badges. This page maps the role into its job duties, responsibility domains and the concrete technologies that belong to each one.
+
+## Job duties
+
+1. Maintain servers and workstations: OS install, updates, user accounts.
+2. Manage backups and recovery points for all critical data ([Backups and recovery](#backups-and-recovery)).
+3. Operate mail and file services for the organization ([Mail infrastructure](#mail-infrastructure), [File services](#file-services)).
+4. Administer server virtualization and isolated workloads ([Virtualization](#virtualization)).
+5. Monitor infrastructure health and respond to alerts ([Monitoring and observability](#monitoring-and-observability)).
+6. Manage basic network services: DHCP, DNS, access, Wi-Fi ([Networking basics](#networking-basics)).
+7. Handle access control: accounts, badges, permissions ([Security basics](#security-basics)).
+8. Automate repetitive operations: scripting, cron, config management ([Automation](#automation)).
 
 ## Responsibility domains
 
